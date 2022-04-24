@@ -10,16 +10,16 @@ special_chars = ['@', '#', '!']
 name_check = False
 instagramusername = "",
 instagramusers = []
-# instagrampass = ""
-# instagrampasswords = []
-# twitterusername = "",
-# twitterusers = []
-# twitterpass = ""
-# twitterpasswords = []
-# social = ""
-# handleuser = open("text-user.txt", "a+")
-# handleinstagram = open("text-instagram.txt", "a+")
-# handletwitter = open("text-twitter.txt", "a+")
+instagrampass = ""
+instagrampasswords = []
+twitterusername = "",
+twitterusers = []
+twitterpass = ""
+twitterpasswords = []
+social = ""
+handleuser = open("text-user.txt", "a+")
+handleinstagram = open("text-instagram.txt", "a+")
+handletwitter = open("text-twitter.txt", "a+")
 
 # ensuring username starts with caps
 def add_name(name):
