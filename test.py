@@ -1,5 +1,4 @@
 import string
-import random
 
 # create variables
 users = ['Maureen', 'Evans']
@@ -106,7 +105,7 @@ while True:
                 print("  ")
                 print(f"Username : {instagramusers[0]}, Password : {instagrampasswords[0]}")
                 # handleinstagram.write(f"{instagramusername},{instagrampass}:\n")
-                print ("User account credentials are(Username,password)({username}:{password})")
+                print ("User account credentials are as per below in the format in brackets(Username,password): ")
                 # print(handleuser.readline())
                 # handleuser.close()
                 print ("Instagram account credentials are as per below in the format in brackets (Username,password): ")
@@ -154,6 +153,3 @@ while True:
         print("Your password must contain one of these special characters: ('@', '#', '!')")
     else:
       print("Your password must contain at least one uppercase")
-
-if __name__ == "__main__":
-  main()      
