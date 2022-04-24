@@ -139,7 +139,7 @@ while True:
                 # print(handleuser.readlines())
                 print (f"Instagram account credentials are Username:{instagramusername}and Password: {instagrampass}")
                 # print(handleinstagram.readlines())
-                
+                print (f"Twitter account credentials are Username:{twitterusername}and Password: {twitterpass}")
                 # print(handletwitter.readlines())
                 # handletwitter.close()
                 break
