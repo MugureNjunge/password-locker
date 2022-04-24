@@ -116,40 +116,40 @@ while True:
                 handletwitter.close()
                 break
 
-    #          #Creating twitter user
-    #         elif social == "Twitter":
-    #             twitterusername = input ("Enter your Twitter Username:") 
-    #             if 2 <len(twitterusername) < 13:
-    #               name_check = True
-    #               twitterusers.append(twitterusername)
-    #               print("Twitter Username successfully created")
-    #             else:
-    #               print("Username should contain between 3-12 characters")
+             #Creating twitter user
+            elif social == "Twitter":
+                twitterusername = input ("Enter your Twitter Username:") 
+                if 2 <len(twitterusername) < 13:
+                  name_check = True
+                  twitterusers.append(twitterusername)
+                  print("Twitter Username successfully created")
+                else:
+                  print("Username should contain between 3-12 characters")
 
-    #             #Creating Twitter password
+                #Creating Twitter password
 
-    #             twitterpass = input ("Kindly enter your Twitter password:")
-    #             twitterpasswords.append(twitterpass)
-    #             print(f"Your Instagram username is {twitterusername} and your Instagram password is {instagrampass}")
-    #             print("  ")
-    #             print(f"Username : {twitterusers[0]}, Password : {twitterpasswords[0]}")
-    #             handletwitter.write(f"{twitterusername},{twitterpass}:\n")
-    #             print ("User account credentials are as per below in the format in brackets(Username,password): ")
-    #             print(handleuser.readlines())
-    #             print ("Instagram account credentials are as per below in the format in brackets (Username,password): ")
-    #             print(handleinstagram.readlines())
-    #             print ("Twitter account credentials are as per below in the format in brackets (Username,password): ")
-    #             print(handletwitter.readlines())
-    #             handletwitter.close()
-    #             break
-    #         else:
-    #           print("Invalid Social media account")
-    #           break
-    #       else:
-    #         print("Your password must be at least 6 characters long")
-    #     else:
-    #       print("Your password must contain at least one number")
-    #   else:
-    #     print("Your password must contain one of these special characters: ('@', '#', '!')")
-    # else:
-    #   print("Your password must contain at least one uppercase")
+                twitterpass = input ("Kindly enter your Twitter password:")
+                twitterpasswords.append(twitterpass)
+                print(f"Your Instagram username is {twitterusername} and your Instagram password is {instagrampass}")
+                print("  ")
+                print(f"Username : {twitterusers[0]}, Password : {twitterpasswords[0]}")
+                handletwitter.write(f"{twitterusername},{twitterpass}:\n")
+                print ("User account credentials are as per below in the format in brackets(Username,password): ")
+                print(handleuser.readlines())
+                print ("Instagram account credentials are as per below in the format in brackets (Username,password): ")
+                print(handleinstagram.readlines())
+                print ("Twitter account credentials are as per below in the format in brackets (Username,password): ")
+                print(handletwitter.readlines())
+                handletwitter.close()
+                break
+            else:
+              print("Invalid Social media account")
+              break
+          else:
+            print("Your password must be at least 6 characters long")
+        else:
+          print("Your password must contain at least one number")
+      else:
+        print("Your password must contain one of these special characters: ('@', '#', '!')")
+    else:
+      print("Your password must contain at least one uppercase")
