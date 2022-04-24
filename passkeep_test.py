@@ -1,7 +1,11 @@
-# Check against other usernames
-# password of 8 characters
+class user :
 
-# class user 
-#   def__init__(Self, Maureen, Evans):
+  def __init__(self, username, password ):
 
+    self.username = username
+    self.password = password
 
+class credentials(user):
+  def __init__ (self, instagram, twitter):
+    self.instagram = instagram
+    self.twitter = twitter
