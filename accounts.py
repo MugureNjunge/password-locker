@@ -17,6 +17,9 @@ twitterusers = []
 twitterpass = ""
 twitterpasswords = []
 social = ""
+handleuser = open("text-user.txt", "a+")
+handleinstagram = open("text-instagram.txt", "a+")
+handletwitter = open("text-twitter.txt", "a+")
 
 # ensuring username starts with caps
 def add_name(name):
@@ -82,6 +85,7 @@ while True:
             print("  ")
             print ("Instagram       Twitter")
             print("  ")
+            handleuser.write(f"{username},{password}:\n")
             social = input("Choose a social media site(Instagram/Twitter):")
             if social == "Instagram":
               #Creating Instagram user
@@ -100,33 +104,52 @@ while True:
                 print(f"Your Instagram username is {instagramusername} and your Instagram password is {instagrampass}")
                 print("  ")
                 print(f"Username : {instagramusers[0]}, Password : {instagrampasswords[0]}")
-            else:
-              print("Choose Twitter")
+                handleinstagram.write(f"{instagramusername},{instagrampass}:\n")
+                print ("User account credentials are as per below in the format in brackets(Username,password): ")
+                print(handleuser.readline())
+                handleuser.close()
+                print ("Instagram account credentials are as per below in the format in brackets (Username,password): ")
+                print(handleinstagram.readline())
+                handleinstagram.close()
+                print ("Twitter account credentials are as per below in the format in brackets (Username,password): ")
+                print(handletwitter.readline())
+                handletwitter.close()
+                break
 
-              #Creating twitter user
-            if social == "Twitter":
-                twitterusername = input ("Enter your Twitter Username:") 
-                if 2 <len(twitterusername) < 13:
-                  name_check = True
-                  twitterusers.append(twitterusername)
-                  print("Twitter Username successfully created")
-                else:
-                  print("Username should contain between 3-12 characters")
+    #          #Creating twitter user
+    #         elif social == "Twitter":
+    #             twitterusername = input ("Enter your Twitter Username:") 
+    #             if 2 <len(twitterusername) < 13:
+    #               name_check = True
+    #               twitterusers.append(twitterusername)
+    #               print("Twitter Username successfully created")
+    #             else:
+    #               print("Username should contain between 3-12 characters")
 
-                #Creating Twitter password
+    #             #Creating Twitter password
 
-                twitterpass = input ("Kindly enter your Twitter password:")
-                twitterpasswords.append(twitterpass)
-                print(f"Your Instagram username is {twitterusername} and your Instagram password is {instagrampass}")
-                print("  ")
-                print(f"Username : {twitterusers[0]}, Password : {twitterpasswords[0]}")
-            else:
-              break
-          else:
-            print("Your password must be at least 6 characters long")
-        else:
-          print("Your password must contain at least one number")
-      else:
-        print("Your password must contain one of these special characters: ('@', '#', '!')")
-    else:
-      print("Your password must contain at least one uppercase")
+    #             twitterpass = input ("Kindly enter your Twitter password:")
+    #             twitterpasswords.append(twitterpass)
+    #             print(f"Your Instagram username is {twitterusername} and your Instagram password is {instagrampass}")
+    #             print("  ")
+    #             print(f"Username : {twitterusers[0]}, Password : {twitterpasswords[0]}")
+    #             handletwitter.write(f"{twitterusername},{twitterpass}:\n")
+    #             print ("User account credentials are as per below in the format in brackets(Username,password): ")
+    #             print(handleuser.readlines())
+    #             print ("Instagram account credentials are as per below in the format in brackets (Username,password): ")
+    #             print(handleinstagram.readlines())
+    #             print ("Twitter account credentials are as per below in the format in brackets (Username,password): ")
+    #             print(handletwitter.readlines())
+    #             handletwitter.close()
+    #             break
+    #         else:
+    #           print("Invalid Social media account")
+    #           break
+    #       else:
+    #         print("Your password must be at least 6 characters long")
+    #     else:
+    #       print("Your password must contain at least one number")
+    #   else:
+    #     print("Your password must contain one of these special characters: ('@', '#', '!')")
+    # else:
+    #   print("Your password must contain at least one uppercase")

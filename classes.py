@@ -1,14 +1,24 @@
-users = ['Maureen', 'Evans']
-caps = string.ascii_uppercase
-numbers = []
-for i in range(0,10):
-  numbers.append(str(i))
-special_chars = ['@', '#', '!']  
-name_check = False
+import unittest
+
+class readfiles(unittest.TestCase):
 
 
 class user :
 
-  classmethod@
-  def __ init __ ()
+  def  mainlog(self, username, password ):
+
+    self.username = username
+    self.password = password
+
+handle = open("text-write.txt", "w")
+
+handle.write("Hello Moringa")
+handle.close()
+
+
+class credentials :
+
+  def accounts(self, instagram, twitter):
+    self.instagram = instagram
+    self.twitter = twitter
 
