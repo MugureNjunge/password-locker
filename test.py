@@ -156,3 +156,5 @@ while True:
     else:
       print("Your password must contain at least one uppercase")
 
+if __name__ == __main__ :
+  unittest.main()
