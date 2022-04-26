@@ -1,4 +1,6 @@
+import unittest
 import string
+import pyperclip
 
 # create variables
 users = ['Maureen', 'Evans']
@@ -105,13 +107,13 @@ while True:
                 print("  ")
                 print(f"Username : {instagramusers[0]}, Password : {instagrampasswords[0]}")
                 # handleinstagram.write(f"{instagramusername},{instagrampass}:\n")
-                print ("User account credentials are as per below in the format in brackets(Username,password): ")
+                print (f"User account credentials are Username: {username} Password:{password}")
                 # print(handleuser.readline())
                 # handleuser.close()
-                print ("Instagram account credentials are as per below in the format in brackets (Username,password): ")
+                print(f"Your Instagram username is {instagramusername} and your Instagram password is {instagrampass}")
                 # print(handleinstagram.readline())
                 # handleinstagram.close()
-                print ("Twitter account credentials are as per below in the format in brackets (Username,password): ")
+                print (f"Your Twitter username is {twitterusername} and your Instagram password is {twitterpass}")
                 # print(handletwitter.readline())
                 # handletwitter.close()
                 break
@@ -153,3 +155,4 @@ while True:
         print("Your password must contain one of these special characters: ('@', '#', '!')")
     else:
       print("Your password must contain at least one uppercase")
+

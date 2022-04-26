@@ -1,5 +1,4 @@
 import string
-import random
 
 # create variables
 users = ['Maureen', 'Evans']
@@ -80,7 +79,7 @@ while True:
           if len(password) >5:
             print(f"Your username is {username} and your password is {password}")
             print("  ")
-            print(f"Hi {username}, Welcome to PassKeep!")
+            print(f"Hi {username},Welcome to PassKeep!Your account has been successfully created.")
             print("  ")
             print("Here are your social media accounts:")
             print("  ")
@@ -106,13 +105,12 @@ while True:
                 print("  ")
                 print(f"Username : {instagramusers[0]}, Password : {instagrampasswords[0]}")
                 # handleinstagram.write(f"{instagramusername},{instagrampass}:\n")
-                # print (f"User account credentials are Username:{username}and Password: {password}")
+                print (f"User account credentials are Username:{username} Password: {password}")
+                print (f"Instagram account credentials are Username:{instagramusername} Password: {instagrampass}")
                 # print(handleuser.readline())
                 # handleuser.close()
-                # print ("Instagram account credentials are  (Username,password): ")
                 # print(handleinstagram.readline())
                 # handleinstagram.close()
-                # print ("Twitter account credentials are as per below in the format in brackets (Username,password): ")
                 # print(handletwitter.readline())
                 # handletwitter.close()
                 break
@@ -135,11 +133,11 @@ while True:
                 print("  ")
                 print(f"Username : {twitterusers[0]}, Password : {twitterpasswords[0]}")
                 # handletwitter.write(f"{twitterusername},{twitterpass}:\n")
-                print (f"User account credentials are Username:{username}and Password: {password}")
+                print (f"User account credentials are Username:{username} Password: {password}")
                 # print(handleuser.readlines())
-                print (f"Instagram account credentials are Username:{instagramusername}and Password: {instagrampass}")
+                print (f"Instagram account credentials are Username:{instagramusername} Password: {instagrampass}")
                 # print(handleinstagram.readlines())
-                print (f"Twitter account credentials are Username:{twitterusername}and Password: {twitterpass}")
+                print (f"Twitter account credentials are Username:{twitterusername} Password: {twitterpass}")
                 # print(handletwitter.readlines())
                 # handletwitter.close()
                 break

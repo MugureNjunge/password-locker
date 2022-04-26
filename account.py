@@ -1,9 +1,8 @@
-# import unittest
+from unittest import TestCase
+import unittest
 
-# class readfiles(unittest.TestCase):
 
-
-class user :
+class user(unittest, TestCase):
   """
   new instances of user
   """
@@ -19,6 +18,12 @@ class user :
     saves any new user to user_list
     """
     user.user_list.append(self)
+
+  def delete_user(self):
+    """
+    delete any user
+    """
+    user.user_list.remove(self)  
 
 class credentials :
 
