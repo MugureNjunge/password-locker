@@ -1,33 +1,79 @@
-from unittest import TestCase
-import unittest
+import random
+import string
+# import pyperclip
 
-
-class user(unittest, TestCase):
-  """
-  new instances of user
-  """
-  user_list = []
-  def  mainlog(self, username, password ):
-
-    self.username = username
-    self.password = password
-  
-  def save_user(self):
-
+class User:
     """
-    saves any new user to user_list
+    class User generates new instances users.
     """
-    user.user_list.append(self)
+    users = []
 
-  def delete_user(self):
+    def __init__(self, username, password):
+        """
+        method that defines the user properties
+        """
+        self.username = username
+        self.password = password
+
+    def save_user(self):
+        """
+        saves new user to the user list
+        """
+        User.users.append(self)
+    
+
+    @classmethod
+    def display_user(cls):
+        return cls.users
+
+    def delete_user(self):
+        '''
+        deletes saved accounts from the list
+        '''
+        User.users.remove(self)
+
+class Credentials():
     """
-    delete any user
+    class credentials creates new objects of credentials
     """
-    user.user_list.remove(self)  
+    accounts = []
+    @classmethod
+    def verify_user(cls,username, password):
+        """
+        verify if user is in our users data
+        """
+        user_1 = ""
+        for user in User.users:
+            if(user.username == username and user.password == password):
+                    user_1 == user.username
+        return user_1
 
-class credentials :
+    def __init__(self,account,userName, password):
+        """
+        defines user credentials to be stored
+        """
+        self.account = account
+        self.userName = userName
+        self.password = password
+    
+    def save_details(self):
+        """
+        add new credential to the credentials list
+        """
+        Credentials.accounts.append(self)
 
-  def accounts(self, instagram, twitter):
-    self.instagram = instagram
-    self.twitter = twitter
-
+    def delete_accounts(self):
+        """
+        method that deletes an account credentials from the accounts
+        """
+        Credentials.accounts.remove(self)
+    
+    @classmethod
+    def find_credential(cls, account):
+        """
+        Method that returns a credential that matches given account name.
+        """
+        for credential in cls.accounts:
+            if credential.account == account:
+                return credential
+    
